@@ -37,6 +37,7 @@ form.addEventListener('submit', async (e) => {
         alert('Er ging iets mis. Probeer het opnieuw.');
     }
 });
+
 // werkt nog niet
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
