@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body class="text-white" style="background: linear-gradient(to bottom, #000000, #00008b);">
+    <header class="bg-black text-white py-3 border-bottom border-white">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a href="#home" class="navbar-brand">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Over mij</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Mij Vaardigheden</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <section id="home" class="vh-100 position-relative">
+        <!-- Overlay content -->
+        <div class="overlay d-flex align-items-center justify-content-center text-center">
+            <div class="container text-white">
+                <h1 class="display-4">Hallo, mijn Naam is <span class="text-warning">Daan van Breugel</span></h1>
+                <p class="lead">Een gepassioneerde webontwikkelaar met een modern portfolio.</p>
+                <a href="#portfolio" class="btn btn-outline-light btn-lg mt-4">Bekijk mijn werk</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Over mij</h2>
+            <p>Ik ben een creatieve ontwikkelaar met ervaring in moderne technologieën zoals JavaScript, React en Node.js. Mijn passie ligt in het oplossen van complexe problemen met gebruiksvriendelijke oplossingen.</p>
+        </div>
+    </section>
+    
+    <section id="skills" class="d-flex align-items-center justify-content-center text-center" style="height: 40vh;">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <div class="container">
+            <h2 class="mb-4">Mijn Vaardigheden</h2>
+            <div class="row gy-3">
+                <div class="col-6 col-md-4">
+                    <div class="skill-box bg-dark p-3 rounded">
+                        <i class="fab fa-html5 text-warning display-4"></i>
+                        <p class="mt-2">HTML</p>
+                        <div class="progress bg-secondary">
+                            <div class="progress-bar bg-warning" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="skill-box bg-dark p-3 rounded">
+                        <i class="fab fa-css3-alt text-primary display-4"></i>
+                        <p class="mt-2">CSS</p>
+                        <div class="progress bg-secondary">
+                            <div class="progress-bar bg-primary" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="skill-box bg-dark p-3 rounded">
+                        <i class="fab fa-js text-warning display-4"></i>
+                        <p class="mt-2">JavaScript</p>
+                        <div class="progress bg-secondary">
+                            <div class="progress-bar bg-warning" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="skill-box bg-dark p-3 rounded">
+                        <i class="fab fa-bootstrap text-purple display-4"></i>
+                        <p class="mt-2">Bootstrap</p>
+                        <div class="progress bg-secondary">
+                            <div class="progress-bar bg-purple" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="skill-box bg-dark p-3 rounded">
+                        <i class="fas fa-code text-success display-4"></i>
+                        <p class="mt-2">Python</p>
+                        <div class="progress bg-secondary">
+                            <div class="progress-bar bg-success" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="skill-box bg-dark p-3 rounded">
+                        <i class="fas fa-database text-info display-4"></i>
+                        <p class="mt-2">SQL</p>
+                        <div class="progress bg-secondary">
+                            <div class="progress-bar bg-info" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Mijn Werk</h2>
+
+            <!-- Image Slider -->
+            <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/image.png" class="d-block w-100" alt="Project 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Project 1</h5>
+                            <p>Beschrijving van project 1</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/image.png" class="d-block w-100" alt="Project 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Project 2</h5>
+                            <p>Beschrijving van project 2</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/image.png" class="d-block w-100" alt="Project 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Project 3</h5>
+                            <p>Beschrijving van project 3</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Vorige</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Volgende</span>
+                </button>    
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact</h2>
+            <form id="contact-form" class="mx-auto" style="max-width: 500px;">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Naam:</label>
+                    <input type="text" class="form-control bg-dark text-white" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail:</label>
+                    <input type="email" class="form-control bg-dark text-white" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Bericht:</label>
+                    <textarea class="form-control bg-dark text-white" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-outline-light w-100">Verstuur</button>
+            </form>
+        </div>
+    </section>  
+
+    <footer class="bg-primaar text-center py-3 border-top border-black">
+        <p> &copy; 2025 Modern Portfolio - Gemaakt door Daan van Breugel</p>
+    </footer>
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
