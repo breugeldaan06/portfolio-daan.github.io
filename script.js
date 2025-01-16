@@ -37,7 +37,7 @@ form.addEventListener('submit', async (e) => {
         alert('Er ging iets mis. Probeer het opnieuw.');
     }
 });
-// werkt nofg niet
+// werkt nog niet
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
     const nameInput = document.getElementById('name');
