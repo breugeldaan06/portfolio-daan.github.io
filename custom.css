@@ -35,6 +35,12 @@
     color: #fff;
 }
 
+.carousel-inner img {
+    width: 100%; /* Zorgt ervoor dat de breedte altijd 100% is */
+    height: 650px; /* Pas dit aan naar de gewenste hoogte */
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding goed wordt bijgesneden zonder te rekken */
+}
+
 .carousel-caption h5 {
     color: #ffd700;
 }

@@ -1,27 +1,3 @@
-import { projects } from './projects.js';
-
-// Dynamisch projecten laden
-const projectsContainer = document.getElementById('projects-container');
-
-const renderProjects = () => {
-    projects.forEach(project => {
-        const projectElement = document.createElement('div');
-        projectElement.classList.add('col-md-4', 'mb-4');
-        projectElement.innerHTML = `
-            <div class="card project h-100">
-                <img src="${project.image}" class="card-img-top" alt="${project.title}">
-                <div class="card-body">
-                    <h5 class="card-title">${project.title}</h5>
-                    <p class="card-text">${project.description}</p>
-                </div>
-            </div>
-        `;
-        projectsContainer.appendChild(projectElement);
-    });
-};
-
-renderProjects();
-
 // Contactformulier verwerking
 const form = document.getElementById('contact-form');
 form.addEventListener('submit', async (e) => {
