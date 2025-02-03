@@ -35,6 +35,17 @@
     color: #fff;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+    opacity: 1;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    filter: brightness(0) invert(1) contrast(2);
+}
+
 .carousel-inner img {
     width: 100%; /* Zorgt ervoor dat de breedte altijd 100% is */
     height: 650px; /* Pas dit aan naar de gewenste hoogte */
