@@ -1,3 +1,7 @@
+html{
+    overflow-x: hidden;
+}
+
 /* Voeg hier extra stijlregels toe als aanvulling op Bootstrap */   
 #home {
     position: relative;
@@ -5,7 +9,7 @@
     height: 100vh; /* Zorg ervoor dat de sectie altijd een volledige hoogte van het scherm heeft */
 }
 
-#home .overlay {
+#home .overlay { 
     position: absolute;
     top: 0;
     left: 0;
@@ -67,7 +71,7 @@
 .skill-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-}
+} 
 
 .form-control {
     border: 1px solid #444;
@@ -89,4 +93,9 @@
 
 footer {
     font-size: 0.9rem;
+}
+
+experience-goals.visible{
+    opacity: 1;
+    transform: translateX(0);
 }

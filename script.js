@@ -36,3 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });  
 
+document.addEventListener('scroll', function() {
+    const textElement = document.getElementById('experience-goals');
+    const rect = textElement.getBoundingClientRect();
+
+    // Check if the text element is in the viewport
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        textElement.classList.add('visible');
+    }
+});

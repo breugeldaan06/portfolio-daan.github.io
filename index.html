@@ -6,9 +6,10 @@
         <title>Portfolio</title>
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
         <link rel="stylesheet" href="custom.css">
     </head>
-    <body class="text-white" style="background: linear-gradient(to bottom, #000000, #00008b);">
+    <body class="text-white" style="background: linear-gradient(to bottom, #000000, #00008b);"> 
         <header class="bg-black text-white py-3 border-bottom border-white">
             <nav class="navbar navbar-expand-lg navbar-dark container">
                 <a href="#home" class="navbar-brand me-auto">
@@ -28,7 +29,7 @@
                 </div>
             </nav>
         </header>
-    
+              
     <section id="home" class="vh-100 position-relative">
         <!-- Overlay content -->
         <div class="overlay d-flex align-items-center justify-content-center text-center">
@@ -41,16 +42,42 @@
     </section>
     
     <section id="about" class="py-5">
-        <div class="mt-5 mb-5 container text-center">
-            <h2 class="mb-4">Over mij</h2>
+        <div class="mt-5 container text-center">
+            <h2>Over mij</h2>
             <p>Ik ben Daan van Breugel, een creatieve en gedreven ontwikkelaar met een sterke expertise in moderne webtechnologieën zoals CSS, Bootstrap en JavaScript. Met een scherp oog voor design en functionaliteit streef ik ernaar om complexe problemen op te lossen met intuïtieve en gebruiksvriendelijke oplossingen. Mijn passie ligt in het vertalen van technische uitdagingen naar innovatieve en efficiënte digitale ervaringen, waarbij ik altijd zoek naar de perfecte balans tussen esthetiek en prestaties.</p>
         </div>
     </section>
     
-    <section id="skills" class="d-flex align-items-center justify-content-center text-center" style="height: 40vh;">
+    <section id="experience-goals" class="py-5 text-light">
+        <div class="container mb-5">
+            <h2 class="text-center mb-5">Mijn Ervaring & Doelen</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4" data-aos="fade-right">
+                    <div class="p-5 bg-dark rounded shadow-lg">
+                        <h3 class="mb-3">Mijn Ervaring</h3>
+                        <h4 class="mb-2">Webontwikkeling</h4>
+                        <p>Met jarenlange ervaring in webontwikkeling heb ik gewerkt aan diverse projecten waarin ik mijn expertise in HTML, CSS, JavaScript en moderne frameworks zoals Bootstrap en Vue.js heb toegepast. Ik ben bedreven in het creëren van intuïtieve en efficiënte gebruikersinterfaces die zowel functioneel als visueel aantrekkelijk zijn.</p>
+                        <h4 class="mb-2">Projectmanagement</h4>
+                        <p>Ik heb ervaring in het leiden van projecten van concept tot voltooiing, waarbij ik teams heb aangestuurd en ervoor heb gezorgd dat deadlines werden gehaald en de kwaliteit werd gewaarborgd.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-left">
+                    <div class="p-5 bg-dark rounded shadow-lg">
+                        <h3 class="mb-3">Mijn Doelen</h3>
+                        <h4 class="mb-2">Vaardigheden Ontwikkelen</h4>
+                        <p>Mijn doel is om mijn vaardigheden verder te ontwikkelen en innovatieve digitale oplossingen te creëren. Ik streef ernaar om mijn kennis in back-end technologieën zoals Python en SQL te verdiepen, terwijl ik mijn passie voor front-end design blijf combineren met performance en gebruiksvriendelijkheid.</p>
+                        <h4 class="mb-2">Nieuwe Technologieën</h4>
+                        <p>Ik ben vastbesloten om op de hoogte te blijven van de nieuwste technologieën en trends in de webontwikkeling, zodat ik altijd de meest moderne en efficiënte oplossingen kan bieden aan mijn klanten.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="d-flex align-items-center justify-content-center text-center mb-10" style="height: 40vh;">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
         <div class="container">
-            <h2 class="mb-4">Mijn Vaardigheden</h2>
+            <h2 class="mb-5">Mijn Vaardigheden</h2>
             <div class="row gy-3">
                 <div class="col-6 col-md-4">
                     <div class="skill-box bg-dark p-3 rounded">
@@ -112,8 +139,8 @@
     
     <section id="portfolio" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Mijn Werk</h2>
-
+            <h2 class="text-center mb-5">Mijn Werk</h2>
+ 
             <!-- Image Slider -->
             <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -144,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Vorige</span>
@@ -158,20 +185,20 @@
     </section>
     
     <section id="contact" class="py-5">
-        <div class="container p-5 rounded text-white w-25 box-shadow" style="background: linear-gradient(to bottom, #01016e, #0b49ce49);">
+        <div class="container p-5 rounded text-white w-25 box-shadow" style="background: linear-gradient(to bottom, #01016d, #2752af8f);">
             <h2 class="text-center mb-4">Contact</h2>
             <form id="contact-form" class="mx-auto" style="max-width: 500px;">
                 <div class="mb-3">
                     <label for="name" class="form-label">Naam:</label>
-                    <input type="text" class="form-control bg-dark text-white" id="name" name="name" required>
+                    <input type="text" class="form-control bg-white text-dark" id="name" name="name" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">E-mail:</label>
-                    <input type="email" class="form-control bg-dark text-white" id="email" name="email" required>
+                    <input type="email" class="form-control bg-white text-dark " id="email" name="email" required>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Bericht:</label>
-                    <textarea class="form-control bg-dark text-white" id="message" name="message" rows="5" required></textarea>
+                    <textarea class="form-control bg-white text-dark" id="message" name="message" rows="5" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-outline-light w-100">Verstuur</button>
             </form>
@@ -205,6 +232,14 @@
                     });
             });
         });
-</script>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animatieduur in ms
+            once: true, // Animatie slechts één keer afspelen
+        });
+    </script>
+
 </body>
 </html>
