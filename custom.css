@@ -1,3 +1,10 @@
+html{
+    overflow-x: hidden;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
 /* Voeg hier extra stijlregels toe als aanvulling op Bootstrap */   
 #home {
     position: relative;
@@ -5,7 +12,7 @@
     height: 100vh; /* Zorg ervoor dat de sectie altijd een volledige hoogte van het scherm heeft */
 }
 
-#home .overlay {
+#home .overlay { 
     position: absolute;
     top: 0;
     left: 0;
@@ -16,6 +23,16 @@
     justify-content: center;
     text-align: center;
     background: rgba(0, 0, 0, 0.5); /* Optioneel, voor meer contrast */
+}
+
+.about-box {
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.1); /* Transparante witte gloed */
+    backdrop-filter: blur(10px); /* Glas-effect */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtiele schaduw */
+    color: #fff;
 }
 
 /* Voeg marge toe aan de tekst van het hamburger menu */
@@ -35,6 +52,27 @@
     color: #fff;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+    opacity: 1;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    filter: brightness(0) invert(1) contrast(2);
+}
+
+#ervaring{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-inner img {
+    width: 100%; /* Zorgt ervoor dat de breedte altijd 100% is */
+    height: 650px; /* Pas dit aan naar de gewenste hoogte */
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding goed wordt bijgesneden zonder te rekken */
+}
+
 .carousel-caption h5 {
     color: #ffd700;
 }
@@ -42,7 +80,7 @@
 .carousel-caption p {
     color: #ddd;
 }
-
+ 
 .skill-box {
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -50,7 +88,7 @@
 .skill-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-}
+} 
 
 .form-control {
     border: 1px solid #444;
@@ -74,20 +112,18 @@ footer {
     font-size: 0.9rem;
 }
 
-
-
-input:invalid {
-    border: 2px solid #dc3545; /* Gebruik dezelfde kleur als je website */
+#experience-goals.visible{
+    opacity: 1;
+    transform: translateX(0);
 }
 
-input:invalid:focus {
-    outline: none;
-    box-shadow: 0 0 5px #dc3545;
+#about {
+    opacity: 0; /* Begin met onzichtbaar */
+    transform: translateY(50px); /* Startpositie lager */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-input:invalid + .error-message {
-    display: block;
-    color: #dc3545;
-    font-size: 0.875em;
-    margin-top: 0.25em;
+#about.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
