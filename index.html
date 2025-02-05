@@ -146,7 +146,7 @@
     <section id="portfolio" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5">Mijn Werk</h2>
- 
+    
             <!-- Image Slider -->
             <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -156,28 +156,28 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="images/visuarkel.png" class="d-block w-100" alt="Project 1">
+                        <img src="images/visuarkel.png" class="d-block img-fluid" alt="Project 1">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Visuarkel</h5>
                             <p>Hier had ik een template gemaakt voor de vriend van mijn zus.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/Portfolio_website.png" class="d-block w-100" alt="Project 2">
+                        <img src="images/Portfolio_website.png" class="d-block img-fluid" alt="Project 2">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Eerste portfolio website</h5>
-                            <p>Tijdens mijn eerste stage moesten we een begin maken van een porfolio website.</p>
+                            <p>Tijdens mijn eerste stage moesten we een begin maken van een portfolio website.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/onfire.png" class="d-block w-100" alt="Project 3">
+                        <img src="images/onfire.png" class="d-block img-fluid" alt="Project 3">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Jalapeño on fire</h5>
-                            <p>een klein project dat mijn vader bedacht voor zijn bedrijf.</p>
+                            <p>Een klein project dat mijn vader bedacht voor zijn bedrijf.</p>
                         </div>
                     </div>
                 </div>
-
+    
                 <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Vorige</span>
@@ -185,31 +185,39 @@
                 <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Volgende</span>
-                </button>    
+                </button>
             </div>
         </div>
     </section>
     
+    
     <section id="contact" class="py-5">
-        <div class="container p-5 rounded text-white w-25 box-shadow" style="background: linear-gradient(to bottom, #01017a, #2752af8f);">
-            <h2 class="text-center mb-4">Contact</h2>
-            <form id="contact-form" class="mx-auto" style="max-width: 500px;">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Naam:</label>
-                    <input type="text" class="form-control bg-white text-dark" id="name" name="name" required>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-10 col-md-6 col-lg-5 p-5 rounded text-white box-shadow" 
+                     style="background: linear-gradient(to bottom, #01017a, #2752af8f);">
+                    <h2 class="text-center mb-4">Contact</h2>
+                    <form id="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Naam:</label>
+                            <input type="text" class="form-control bg-white text-dark" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail:</label>
+                            <input type="email" class="form-control bg-white text-dark " id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Bericht:</label>
+                            <textarea class="form-control bg-white text-dark" id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-light w-100">Verstuur</button>
+                    </form>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">E-mail:</label>
-                    <input type="email" class="form-control bg-white text-dark " id="email" name="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Bericht:</label>
-                    <textarea class="form-control bg-white text-dark" id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-outline-light w-100">Verstuur</button>
-            </form>
+            </div>
         </div>
-    </section>  
+    </section>
+    
+      
 
     <footer class="bg-primaar text-center py-3 border-top border-black"> 
         <p> &copy; Daan van Breugel</p>
