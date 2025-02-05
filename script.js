@@ -37,11 +37,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });  
 
 document.addEventListener('scroll', function() {
-    const textElement = document.getElementById('experience-goals');
-    const rect = textElement.getBoundingClientRect();
+    const sections = ['experience-goals', 'about'];
 
-    // Check if the text element is in the viewport
-    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        textElement.classList.add('visible');
-    }
+    sections.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.85 && rect.bottom >= 0) {
+                element.classList.add('visible');
+            }
+        }
+    });
 });

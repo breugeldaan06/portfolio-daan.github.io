@@ -1,6 +1,9 @@
 html{
     overflow-x: hidden;
 }
+body{
+    font-family: 'Poppins', sans-serif;
+}
 
 /* Voeg hier extra stijlregels toe als aanvulling op Bootstrap */   
 #home {
@@ -20,6 +23,16 @@ html{
     justify-content: center;
     text-align: center;
     background: rgba(0, 0, 0, 0.5); /* Optioneel, voor meer contrast */
+}
+
+.about-box {
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.1); /* Transparante witte gloed */
+    backdrop-filter: blur(10px); /* Glas-effect */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtiele schaduw */
+    color: #fff;
 }
 
 /* Voeg marge toe aan de tekst van het hamburger menu */
@@ -50,6 +63,10 @@ html{
     filter: brightness(0) invert(1) contrast(2);
 }
 
+#ervaring{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 .carousel-inner img {
     width: 100%; /* Zorgt ervoor dat de breedte altijd 100% is */
     height: 650px; /* Pas dit aan naar de gewenste hoogte */
@@ -63,7 +80,7 @@ html{
 .carousel-caption p {
     color: #ddd;
 }
-
+ 
 .skill-box {
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -95,7 +112,18 @@ footer {
     font-size: 0.9rem;
 }
 
-experience-goals.visible{
+#experience-goals.visible{
     opacity: 1;
     transform: translateX(0);
+}
+
+#about {
+    opacity: 0; /* Begin met onzichtbaar */
+    transform: translateY(50px); /* Startpositie lager */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#about.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
