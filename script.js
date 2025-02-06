@@ -14,7 +14,7 @@ form.addEventListener('submit', async (e) => {
     }
 });
 
-// werkt nog niet
+// stuur een mail naar mij
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
     const nameInput = document.getElementById('name');
@@ -34,8 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
             nameInput.parentNode.insertBefore(errorMessage, nameInput.nextSibling);
         }
     }
-});  
+});
 
+// de animatie naar binnen
 document.addEventListener('scroll', function() {
     const sections = ['experience-goals', 'about'];
 

@@ -45,15 +45,15 @@ body{
     color: rgba(255, 255, 255, 0.7);
     transition: color 0.3s;
 }
+
 #skills , #portfolio , #about
 {
     margin-bottom: 40px;
 }
+
 .nav-link:hover {
     color: #fff;
 }
-
-
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
