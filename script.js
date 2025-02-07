@@ -18,22 +18,63 @@ form.addEventListener('submit', async (e) => {
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
     const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    function showError(input, message) {
+        const errorMessage = input.nextElementSibling;
+        errorMessage.textContent = message;
+        errorMessage.style.display = 'block';
+        input.classList.add('error');
+    }
+
+    function hideError(input) {
+        const errorMessage = input.nextElementSibling;
+        errorMessage.style.display = 'none';
+        input.classList.remove('error');
+    }
 
     form.addEventListener('submit', function(event) {
-        if (!nameInput.validity.valid) {
-            event.preventDefault();
-            showError();
+        event.preventDefault();
+        let isValid = true;
+
+        if (!nameInput.value) {
+            showError(nameInput, 'Vul je naam in.');
+            isValid = false;
+        } else {
+            hideError(nameInput);
+        }
+
+        if (!emailInput.value || !emailInput.validity.valid) {
+            showError(emailInput, 'Vul een geldig e-mailadres in.');
+            isValid = false;
+        } else {
+            hideError(emailInput);
+        }
+
+        if (!messageInput.value) {
+            showError(messageInput, 'Vul je bericht in.');
+            isValid = false;
+        } else {
+            hideError(messageInput);
+        }
+
+        if (isValid) {
+            // Handle form submission
         }
     });
 
-    function showError() {
-        const errorMessage = document.createElement('div');
-        errorMessage.classList.add('error-message');
-        errorMessage.textContent = 'Vul niet veld in.';
-        if (!nameInput.nextElementSibling) {
-            nameInput.parentNode.insertBefore(errorMessage, nameInput.nextSibling);
-        }
-    }
+    emailInput.addEventListener('input', function() {
+        hideError(emailInput);
+    });
+
+    nameInput.addEventListener('input', function() {
+        hideError(nameInput);
+    });
+
+    messageInput.addEventListener('input', function() {
+        hideError(messageInput);
+    });
 });
 
 // de animatie naar binnen

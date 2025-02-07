@@ -289,16 +289,6 @@
                     messageInput.classList.remove('error');
                     document.getElementById('message-error').style.display = 'none';
                 }
-
-                if (isValid) {
-                    emailjs.sendForm('service_teru75g', 'template_64evrja', form)
-                        .then(function(response) {
-                            alert('Bedankt! Je bericht is verzonden.');
-                            form.reset();
-                        }, function(error) {
-                            alert('Er ging iets mis. Probeer het opnieuw.');
-                        });
-                }
             });
         });
 
