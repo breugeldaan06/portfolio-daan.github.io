@@ -319,5 +319,8 @@ footer {
         position: static;
         padding-top: 10px;
         text-align: center;
+        background: linear-gradient(to bottom, #00161a, #00008b); /* Add background for better readability */
+        color: #fff; /* Ensure text is readable */
+        margin-top: 10px; /* Add some space between the image and the text */
     }
 }
