@@ -43,7 +43,10 @@ body{
 }
 
 .navbar-toggler {
-    margin-right: 15px; /* Adjust the value as needed */
+    position: absolute;
+    top: 20px; /* Adjust the value as needed */
+    right: 20px; /* Adjust the value as needed */
+    z-index: 10; /* Ensure it stays on top of the photo */
 }
 
 .nav-link {
@@ -69,6 +72,12 @@ body{
 .carousel-control-prev:hover .carousel-control-prev-icon,
 .carousel-control-next:hover .carousel-control-next-icon {
     filter: brightness(0) invert(1) contrast(2);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 35%;
+    transform: translateY(-50%);
 }
 
 #ervaring{
@@ -304,5 +313,11 @@ footer {
 
     .carousel-inner img {
         height: 300px; /* Pas dit aan naar de gewenste hoogte voor mobiele apparaten */
+    }
+
+    .carousel-caption {
+        position: static;
+        padding-top: 10px;
+        text-align: center;
     }
 }
