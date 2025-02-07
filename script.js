@@ -44,7 +44,7 @@ document.addEventListener('scroll', function() {
         const element = document.getElementById(id);
         if (element) {
             const rect = element.getBoundingClientRect();
-            if (rect.top <= window.innerHeight * 0.85 && rect.bottom >= 0) {
+            if (rect.top <= window.innerHeight * .85 && rect.bottom >= 0) {
                 element.classList.add('visible');
             }
         }
