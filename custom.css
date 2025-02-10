@@ -86,7 +86,7 @@ body{
 
 .carousel-inner img {
     width: 100%; /* Zorgt ervoor dat de breedte altijd 100% is */
-    height: 500px; /* Pas dit aan naar de gewenste hoogte */
+    height: 600px; /* Pas dit aan naar de gewenste hoogte */
     object-fit: cover; /* Zorgt ervoor dat de afbeelding goed wordt bijgesneden zonder te rekken */
 }
 
@@ -108,11 +108,11 @@ body{
 } 
 
 .skill-box:nth-child(odd) {
-    background: linear-gradient(to bottom, #00161a, #00008b);
+    background: linear-gradient(to bottom, #00161a, #0000cc);
 }
 
 .skill-box:nth-child(even) {
-    background: linear-gradient(to top, #00161a, #00008b);
+    background: linear-gradient(to top, #00161a, #0000cc);
 }
 
 [data-aos="fade-up"] {
@@ -305,21 +305,21 @@ footer {
     }
 
     #ervaring {
-        background: linear-gradient(to bottom, #00161a, #00008b) !important;
+        background: linear-gradient(to bottom, #00161a, #0000cc) !important;
     }
     #doel {
-        background: linear-gradient(to bottom, #00008b, #00161a) !important;
+        background: linear-gradient(to bottom, #0000cc, #00161a) !important;
     }
 
     .carousel-inner img {
-        height: 300px; /* Pas dit aan naar de gewenste hoogte voor mobiele apparaten */
+        height: 270px; /* Pas dit aan naar de gewenste hoogte voor mobiele apparaten */
     }
 
     .carousel-caption {
         position: static;
         padding-top: 10px;
         text-align: center;
-        background: linear-gradient(to bottom, #00161a, #00008b); /* Add background for better readability */
+        background: linear-gradient(to bottom, #00161a, #0000cc); /* Add background for better readability */
         color: #fff; /* Ensure text is readable */
         margin-top: 10px; /* Add some space between the image and the text */
     }
