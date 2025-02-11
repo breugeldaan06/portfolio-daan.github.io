@@ -156,7 +156,7 @@ footer {
 #about {
     opacity: 0; /* Begin met onzichtbaar */
     transform: translateY(50px); /* Startpositie lager */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 #about.visible {
@@ -250,7 +250,7 @@ footer {
     height: 300px;
     top: 60%;
     left: 50%;
-    animation-duration: 40s;
+    animation-duration: 20s;
 }
 
 .circle:nth-child(6) {
@@ -258,7 +258,7 @@ footer {
     height: 300px;
     top: 0%;
     left: 40%;
-    animation-duration: 40s;
+    animation-duration: 20s;
 }
 
 .circle:nth-child(7) {
@@ -266,7 +266,7 @@ footer {
     height: 300px;
     top: 60%;
     left: 10%;
-    animation-duration: 40s;
+    animation-duration: 20s;
 }
 
 .circle:nth-child(8) {
@@ -274,7 +274,7 @@ footer {
     height: 100px;
     top: 10%;
     left: 90%;
-    animation-duration: 40s;
+    animation-duration: 20s;
 }
 
 .circle:nth-child(9) {
@@ -282,7 +282,7 @@ footer {
     height: 150px;
     top: 20%;
     left: 30%;
-    animation-duration: 40s;
+    animation-duration: 20s;
 }
 
 @keyframes move {
