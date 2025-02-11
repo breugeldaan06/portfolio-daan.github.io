@@ -115,6 +115,12 @@ body{
     background: linear-gradient(to top, #00161a, #0000cc);
 }
 
+.skill-box img {
+    width: 56px; /* Adjust the size to match the icons */
+    height: 56px; /* Adjust the size to match the icons */
+    object-fit: contain;
+}
+
 [data-aos="fade-up"] {
     opacity: 0;
     transform: translateY(50px);
@@ -321,6 +327,12 @@ footer {
         text-align: center;
         background: linear-gradient(to bottom, #00161a, #0000cc); /* Add background for better readability */
         color: #fff; /* Ensure text is readable */
-        margin-top: 10px; /* Add some space between the image and the text */
     }
+
+    .skill-box img {
+        width: 56px; /* Adjust the size to match the icons */
+        height: 37.1px; /* Adjust the size to match the icons */
+        object-fit: contain;
+    }
+    
 }
