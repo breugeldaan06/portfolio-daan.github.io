@@ -1,7 +1,13 @@
 // Contactformulier verwerking
 const form = document.getElementById('contact-form');
+
+// Add loading spinner during form submission
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Versturen...';
+
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
@@ -39,6 +45,9 @@ form.addEventListener('submit', async (e) => {
             alert('Er ging iets mis. Probeer het opnieuw.');
         }
     }
+
+    submitButton.disabled = false;
+    submitButton.innerHTML = 'Verstuur';
 });
 
 function showError(input, message) {
@@ -72,6 +81,11 @@ document.addEventListener('DOMContentLoaded', function() {
     messageInput.addEventListener('input', function() {
         hideError(messageInput);
     });
+});
+
+// Clear error messages on input focus
+document.querySelectorAll('#contact-form input, #contact-form textarea').forEach(input => {
+    input.addEventListener('focus', () => hideError(input));
 });
 
 // de animatie naar binnen

@@ -4,7 +4,9 @@ html{
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Ensure Poppins is applied */
+    font-size: 1.1rem; /* Slightly larger text */
+    line-height: 1.6; /* Improve readability */
 }
 
 /* Voeg hier extra stijlregels toe als aanvulling op Bootstrap */   
@@ -27,11 +29,11 @@ body{
     background: rgba(0, 0, 0, 0.5); /* Optioneel, voor meer contrast */
 }
 
-.about-box {
+.about-box { 
     max-width: 800px;
     background: rgba(0, 0, 0, 0.1); /* Transparante witte gloed */
     backdrop-filter: blur(10px); /* Glas-effect */
-    border-radius: 15px;
+    border-radius: 25px; /* Increased border radius */
     padding: 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtiele schaduw */
     color: #fff;
@@ -158,6 +160,11 @@ body{
 
 #ervaring{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 25px; /* Increased border radius */
+}
+
+#doel {
+    border-radius: 25px; /* Increased border radius */
 }
 
 .carousel-inner img {
@@ -210,7 +217,7 @@ body{
 
 .form-control {
     border: 1px solid #444;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem; /* Slightly more rounded input fields */
     padding: 0.75rem;
 }
 
@@ -270,14 +277,19 @@ footer {
     font-size: 0.875rem;
     display: none;
     position: absolute;
-    top: 75%;
-    left: 10px;
-    transform: translateY(-50%);
+    top: 100%; /* Adjusted to appear below the input */
+    left: 0;
+    transform: translateY(5px);
     pointer-events: none;
 }
+
 .form-control.error {
     border-color: #ff4d4d;
     position: relative;
+}
+
+.spinner-border {
+    vertical-align: middle;
 }
 
 .background-circles {
@@ -302,7 +314,7 @@ footer {
     height: 100px;
     top: 10%;
     left: 10%;
-    animation-duration: 25s;
+    animation-duration: 5s;
 }
 
 .circle:nth-child(2) {
@@ -310,7 +322,7 @@ footer {
     height: 150px;
     top: 30%;
     left: 60%;
-    animation-duration: 20s;
+    animation-duration: 12s;
 }
 
 .circle:nth-child(3) {
@@ -318,7 +330,7 @@ footer {
     height: 200px;
     top: 70%;
     left: 20%;
-    animation-duration: 30s;
+    animation-duration: 18s;
 }
 
 .circle:nth-child(4) {
@@ -326,7 +338,7 @@ footer {
     height: 250px;
     top: 20%;
     left: 80%;
-    animation-duration: 35s;
+    animation-duration: 20s;
 }
 
 .circle:nth-child(5) {
@@ -334,7 +346,7 @@ footer {
     height: 300px;
     top: 60%;
     left: 50%;
-    animation-duration: 20s;
+    animation-duration: 12s;
 }
 
 .circle:nth-child(6) {
@@ -342,7 +354,7 @@ footer {
     height: 300px;
     top: 0%;
     left: 40%;
-    animation-duration: 20s;
+    animation-duration: 12s;
 }
 
 .circle:nth-child(7) {
@@ -350,7 +362,7 @@ footer {
     height: 300px;
     top: 60%;
     left: 10%;
-    animation-duration: 20s;
+    animation-duration: 12s;
 }
 
 .circle:nth-child(8) {
@@ -358,7 +370,7 @@ footer {
     height: 100px;
     top: 10%;
     left: 90%;
-    animation-duration: 20s;
+    animation-duration: 12s;
 }
 
 .circle:nth-child(9) {
@@ -366,18 +378,24 @@ footer {
     height: 150px;
     top: 20%;
     left: 30%;
-    animation-duration: 20s;
+    animation-duration: 12s;
 }
 
 @keyframes move {
     0% {
-        transform: translateY(0) translateX(0);
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(50px, -30px);
     }
     50% {
-        transform: translateY(-50px) translateX(50px);
+        transform: translate(-50px, 50px);
+    }
+    75% {
+        transform: translate(30px, -50px);
     }
     100% {
-        transform: translateY(0) translateX(0);
+        transform: translate(0, 0);
     }
 }
 
@@ -420,5 +438,20 @@ footer {
     .navbar-brand {
         margin-bottom: 10px; /* Add some spacing below the brand logo */
     }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins to headings */
+    font-weight: 600; /* Make headings bold */
+}
+
+.nav-link, .btn, .form-control, .carousel-caption {
+    font-size: 1rem; /* Slightly larger text for links, buttons, and captions */
+}
+
+.btn-lg {
+    padding: 1rem 2rem; /* Normal padding */
+    font-size: 1rem; /* Normal font size */
+    border-radius: 0.5rem; /* Slightly more rounded buttons */
 }
 
