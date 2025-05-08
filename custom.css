@@ -29,6 +29,15 @@ body{
     background: rgba(0, 0, 0, 0.5); /* Optioneel, voor meer contrast */
 }
 
+#home img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#home img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
 .about-box { 
     max-width: 800px;
     background: rgba(0, 0, 0, 0.1); /* Transparante witte gloed */
@@ -59,9 +68,13 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 24px;
-    height: 18px;
+    width: 30px;
+    height: 24px;
     cursor: pointer;
+    padding: 0;
+    background: transparent;
+    border: none;
+    position: relative;
 }
 
 .custom-toggler span {
@@ -69,62 +82,48 @@ body{
     width: 100%;
     height: 2px;
     background-color: white;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
+    position: absolute;
+    left: 0;
 }
 
 .custom-toggler span:nth-child(1) {
-    transform-origin: top left;
+    top: 0;
+}
+
+.custom-toggler span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .custom-toggler span:nth-child(3) {
-    transform-origin: bottom left;
+    bottom: 0;
 }
 
-.navbar-toggler.collapsed .custom-toggler span:nth-child(1) {
-    transform: rotate(45deg) translateX(3px); /* Verplaatst de lijn 5px naar rechts */
+.navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
 }
 
-
-.navbar-toggler.collapsed .custom-toggler span:nth-child(2) {
-    /* opacity: 0; */
-    transform: rotate(-45deg) translateX(-3.4px);
-}
-
-.navbar-toggler.collapsed .custom-toggler span:nth-child(3) {
-    /* transform: rotate(-45deg)translateX(-3px); */
+.navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(2) {
     opacity: 0;
+    transform: translateX(-20px);
 }
 
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    top: 50%;
-    left: 0;
-    transition: transform 0.3s ease-in-out;
+.navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
 }
 
-.navbar-toggler-icon::before {
-    transform: translateY(-6px);
+.navbar-collapse {
+    transition: all 0.3s ease-in-out;
 }
 
-.navbar-toggler-icon::after {
-    transform: translateY(6px);
+.navbar-collapse.collapsing {
+    transition: all 0.3s ease-in-out;
 }
 
-.navbar-toggler.collapsed .navbar-toggler-icon::before {
-    transform: rotate(45deg) translateY(0);
-}
-
-.navbar-toggler.collapsed .navbar-toggler-icon::after {
-    transform: rotate(-45deg) translateY(0);
-}
-
-.navbar-toggler.collapsed .navbar-toggler-icon {
-    transform: rotate(90deg);
+.navbar-collapse.show {
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-link {
@@ -239,6 +238,8 @@ footer {
     font-size: 0.9rem;
 }
 
+
+
 #experience-goals.visible{
     opacity: 1;
     transform: translateX(0);
@@ -247,7 +248,9 @@ footer {
 #about {
     opacity: 0; /* Begin met onzichtbaar */
     transform: translateY(50px); /* Startpositie lager */
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 1s ease-out, transform 1s ease-out; /* geeft een frosted glass effect */
+    -webkit-backdrop-filter: blur(5px);
+
 }
 
 #about.visible {
@@ -453,5 +456,27 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1rem 2rem; /* Normal padding */
     font-size: 1rem; /* Normal font size */
     border-radius: 0.5rem; /* Slightly more rounded buttons */
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+    }
+    
+    .navbar-nav {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .navbar {
+        z-index: 1001;
+    }
 }
 
