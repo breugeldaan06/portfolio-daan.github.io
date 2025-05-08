@@ -1,3 +1,14 @@
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif; /* Ensure Poppins is applied */
+    font-size: 1.1rem; /* Slightly larger text */
+    line-height: 1.6; /* Improve readability */
+}
+
 /* Voeg hier extra stijlregels toe als aanvulling op Bootstrap */   
 #home {
     position: relative;
@@ -5,7 +16,7 @@
     height: 100vh; /* Zorg ervoor dat de sectie altijd een volledige hoogte van het scherm heeft */
 }
 
-#home .overlay {
+#home .overlay { 
     position: absolute;
     top: 0;
     left: 0;
@@ -18,21 +29,147 @@
     background: rgba(0, 0, 0, 0.5); /* Optioneel, voor meer contrast */
 }
 
+#home img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#home img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about-box { 
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.1); /* Transparante witte gloed */
+    backdrop-filter: blur(10px); /* Glas-effect */
+    border-radius: 25px; /* Increased border radius */
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtiele schaduw */
+    color: #fff;
+}
+
 /* Voeg marge toe aan de tekst van het hamburger menu */
 .navbar-nav .nav-item .nav-link , .navbar-brand {
     margin-left: 15px; /* Pas de waarde aan naar wens */
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 20px; /* Adjust the value as needed */
+    right: 20px; /* Adjust the value as needed */
+    z-index: 10; /* Ensure it stays on top of the photo */
+}
+
+.navbar-toggler-icon {
+    display: none;
+}
+
+.custom-toggler {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    padding: 0;
+    background: transparent;
+    border: none;
+    position: relative;
+}
+
+.custom-toggler span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
+    position: absolute;
+    left: 0;
+}
+
+.custom-toggler span:nth-child(1) {
+    top: 0;
+}
+
+.custom-toggler span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.custom-toggler span:nth-child(3) {
+    bottom: 0;
+}
+
+.navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+.navbar-collapse {
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-collapse.collapsing {
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-collapse.show {
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-link {
     color: rgba(255, 255, 255, 0.7);
     transition: color 0.3s;
 }
+
 #skills , #portfolio , #about
 {
     margin-bottom: 40px;
 }
+
 .nav-link:hover {
     color: #fff;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+    opacity: 1;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    filter: brightness(0) invert(1) contrast(2);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 35%;
+    transform: translateY(-50%);
+}
+
+#ervaring{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 25px; /* Increased border radius */
+}
+
+#doel {
+    border-radius: 25px; /* Increased border radius */
+}
+
+.carousel-inner img {
+    width: 100%; /* Zorgt ervoor dat de breedte altijd 100% is */
+    height: 600px; /* Pas dit aan naar de gewenste hoogte */
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding goed wordt bijgesneden zonder te rekken */
 }
 
 .carousel-caption h5 {
@@ -42,7 +179,7 @@
 .carousel-caption p {
     color: #ddd;
 }
-
+ 
 .skill-box {
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -50,15 +187,42 @@
 .skill-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+} 
+
+.skill-box:nth-child(odd) {
+    background: linear-gradient(to bottom, #00161a, #0000cc);
+}
+
+.skill-box:nth-child(even) {
+    background: linear-gradient(to top, #00161a, #0000cc);
+}
+
+.skill-box img {
+    width: 56px; /* Adjust the size to match the icons */
+    height: 56px; /* Adjust the size to match the icons */
+    object-fit: contain;
+}
+
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .form-control {
     border: 1px solid #444;
+    border-radius: 0.5rem; /* Slightly more rounded input fields */
+    padding: 0.75rem;
 }
 
 .form-control:focus {
-    border-color: #fff;
-    box-shadow: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
 }
 
 #portfolio .project {
@@ -76,18 +240,243 @@ footer {
 
 
 
-input:invalid {
-    border: 2px solid #dc3545; /* Gebruik dezelfde kleur als je website */
+#experience-goals.visible{
+    opacity: 1;
+    transform: translateX(0);
 }
 
-input:invalid:focus {
-    outline: none;
-    box-shadow: 0 0 5px #dc3545;
+#about {
+    opacity: 0; /* Begin met onzichtbaar */
+    transform: translateY(50px); /* Startpositie lager */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* geeft een frosted glass effect */
+    -webkit-backdrop-filter: blur(5px);
+
 }
 
-input:invalid + .error-message {
-    display: block;
-    color: #dc3545;
-    font-size: 0.875em;
-    margin-top: 0.25em;
+#about.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: -60px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, right 0.5s ease-in-out;
+}
+
+#message {
+    resize: none;
+}
+
+#message-error{
+    top: 25%;
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-size: 0.875rem;
+    display: none;
+    position: absolute;
+    top: 100%; /* Adjusted to appear below the input */
+    left: 0;
+    transform: translateY(5px);
+    pointer-events: none;
+}
+
+.form-control.error {
+    border-color: #ff4d4d;
+    position: relative;
+}
+
+.spinner-border {
+    vertical-align: middle;
+}
+
+.background-circles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: move 10s linear infinite;
+}
+
+.circle:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 10%;
+    animation-duration: 5s;
+}
+
+.circle:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    top: 30%;
+    left: 60%;
+    animation-duration: 12s;
+}
+
+.circle:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    top: 70%;
+    left: 20%;
+    animation-duration: 18s;
+}
+
+.circle:nth-child(4) {
+    width: 250px;
+    height: 250px;
+    top: 20%;
+    left: 80%;
+    animation-duration: 20s;
+}
+
+.circle:nth-child(5) {
+    width: 300px;
+    height: 300px;
+    top: 60%;
+    left: 50%;
+    animation-duration: 12s;
+}
+
+.circle:nth-child(6) {
+    width: 300px;
+    height: 300px;
+    top: 0%;
+    left: 40%;
+    animation-duration: 12s;
+}
+
+.circle:nth-child(7) {
+    width: 300px;
+    height: 300px;
+    top: 60%;
+    left: 10%;
+    animation-duration: 12s;
+}
+
+.circle:nth-child(8) {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 90%;
+    animation-duration: 12s;
+}
+
+.circle:nth-child(9) {
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    left: 30%;
+    animation-duration: 12s;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(50px, -30px);
+    }
+    50% {
+        transform: translate(-50px, 50px);
+    }
+    75% {
+        transform: translate(30px, -50px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@media (max-width: 767px) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    #ervaring {
+        background: linear-gradient(to bottom, #00161a, #0000cc) !important;
+    }
+    #doel {
+        background: linear-gradient(to bottom, #0000cc, #00161a) !important;
+    }
+
+    .carousel-inner img {
+        height: 270px; /* Pas dit aan naar de gewenste hoogte voor mobiele apparaten */
+    }
+
+    .carousel-caption {
+        position: static;
+        padding-top: 10px;
+        text-align: center;
+        background: linear-gradient(to bottom, #00161a, #0000cc); /* Add background for better readability */
+        color: #fff; /* Ensure text is readable */
+    }
+
+    .skill-box img {
+        width: 56px; /* Adjust the size to match the icons */
+        height: 36px; /* Adjust the size to match the icons */
+        object-fit: contain;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px; /* Add some spacing between navbar items */
+    }
+
+    .navbar-brand {
+        margin-bottom: 10px; /* Add some spacing below the brand logo */
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins to headings */
+    font-weight: 600; /* Make headings bold */
+}
+
+.nav-link, .btn, .form-control, .carousel-caption {
+    font-size: 1rem; /* Slightly larger text for links, buttons, and captions */
+}
+
+.btn-lg {
+    padding: 1rem 2rem; /* Normal padding */
+    font-size: 1rem; /* Normal font size */
+    border-radius: 0.5rem; /* Slightly more rounded buttons */
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+    }
+    
+    .navbar-nav {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .navbar {
+        z-index: 1001;
+    }
+}
+

@@ -1,56 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="custom.css">
-</head>
-<body class="text-white" style="background: linear-gradient(to bottom, #000000, #00008b);">
-    <header class="bg-black text-white py-3 border-bottom border-white">
-        <nav class="navbar navbar-expand-lg navbar-dark container">
-            <a href="#home" class="navbar-brand">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">Over mij</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link">Mij Vaardigheden</a></li>
-                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio-Daan van Breugel</title>
+        <!-- lettertype  -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        <link rel="stylesheet" href="custom.css">
+        <!-- Icoon web -->
+        <link rel="icon" type="image/png" href="./images/logo.png">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    </head>
+    <body class="text-white" style="background: linear-gradient(to bottom, #010628, #00008b);"> 
+        <div class="background-circles">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            
+        </div>
+        <header class="bg-black text-white py-3 border-bottom border-white">
+            <nav class="navbar navbar-expand-lg navbar-dark container">
+                 <a href="#home" class="navbar-brand me-auto">
+                    <img src="./images/logo.png" alt="Logo" height="70" class="d-inline-block align-top">
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="custom-toggler">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button> 
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#about" class="nav-link">Over mij</a></li>
+                        <li class="nav-item"><a href="#experience-goals" class="nav-link">Mijn Ervaring & Doelen</a></li>
+                        <li class="nav-item"><a href="#skills-heading" class="nav-link">Mijn Vaardigheden</a></li>
+                        <li class="nav-item"><a href="#portfolio" class="nav-link">Projecten</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav> 
+        </header>      
+               
     <section id="home" class="vh-100 position-relative">
         <!-- Overlay content -->
         <div class="overlay d-flex align-items-center justify-content-center text-center">
             <div class="container text-white">
-                <h1 class="display-4">Hallo, mijn Naam is <span class="text-warning">Daan van Breugel</span></h1>
-                <p class="lead">Een gepassioneerde webontwikkelaar met een modern portfolio.</p>
-                <a href="#portfolio" class="btn btn-outline-light btn-lg mt-4">Bekijk mijn werk</a>
+                <!-- Add the image -->
+                <div class="mb-4">
+                    <img src="images/profile.png" alt="Daan van Breugel" class="img-fluid shadow-lg" style="width: 300px; height: 300px; object-fit: cover; border: 4px solid #0000cc; border-radius: 85px;">
+                </div>
+                <h1 class="display-4">Welkom, mijn naam is <span class="text-primary">Daan van Breugel</span></h1>
+                <p class="lead">Een gepassioneerde webontwikkelaar, met een gedreven mindset.</p>
+                <a href="#portfolio" class="btn btn-outline-primary btn-lg mt-4 text-white">Bekijk mijn werk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add aria-labels for better accessibility -->
+    <section id="about" class="py-5 text-light" aria-labelledby="about-heading">
+        <div class="container">
+            <h2 id="about-heading" class="text-center mb-4">Over mij</h2>
+            <div class="about-box mx-auto p-5 text-center rounded">
+                <p>Mijn naam is <strong>Daan van Breugel</strong>, een creatieve en gedreven ontwikkelaar met een sterke expertise in moderne webtechnologieën zoals <strong>CSS, Bootstrap en JavaScript</strong>. Met een scherp oog voor design en functionaliteit streef ik ernaar om complexe problemen op te lossen met intuïtieve en gebruiksvriendelijke oplossingen. Mijn passie ligt in het vertalen van technische uitdagingen naar innovatieve en efficiënte digitale ervaringen, waarbij ik altijd zoek naar de perfecte balans tussen esthetiek en prestaties.</p>
             </div>
         </div>
     </section>
     
-    <section id="about" class="py-5">
-        <div class="container text-center">
-            <h2 class="mb-4">Over mij</h2>
-            <p>Ik ben een creatieve ontwikkelaar met ervaring in moderne technologieën zoals JavaScript, React en Node.js. Mijn passie ligt in het oplossen van complexe problemen met gebruiksvriendelijke oplossingen.</p>
-        </div>
+    <section id="experience-goals" class="py-5 text-light" aria-labelledby="experience-goals-heading">
+        <div class="container mb-5">
+            <h2 id="experience-goals-heading" class="text-center mb-5">Mijn Ervaring & Doelen</h2>
+            <div class="row align-items-stretch">
+                <div class="col-md-6 mb-4 d-flex" data-aos="fade-right">
+                    <div id="ervaring" class="p-5 bg-dark rounded shadow-lg w-100 h-100 d-flex flex-column" style="background: linear-gradient(to right, #013088);">
+                        <h3 class="mb-5">Mijn Ervaring</h3>
+                        <h4 class="mb-2">Webontwikkeling</h4>
+                        <p>Met jarenlange ervaring in webontwikkeling heb ik gewerkt aan diverse projecten waarin ik mijn expertise in HTML, CSS, JavaScript en moderne frameworks zoals Bootstrap en Vue.js heb toegepast. Ik ben bedreven in het creëren van intuïtieve en efficiënte gebruikersinterfaces die zowel functioneel als visueel aantrekkelijk zijn.</p>
+                        <h4 class="mb-2">Projectmanagement</h4>  
+                        <p>Ik heb ervaring in het leiden van projecten van concept tot voltooiing, waarbij ik teams heb aangestuurd en ervoor heb gezorgd dat deadlines werden gehaald en de kwaliteit werd gewaarborgd.</p>
+                    </div>
+                </div>
+                    <div class="col-md-6 mb-4 d-flex" data-aos="fade-left">
+                        <div id="doel" class="p-5 bg-dark rounded shadow-lg w-100 h-100 d-flex flex-column" style="background: linear-gradient(to right, #013088);">
+                            <h3 class="mb-5">Mijn Doelen</h3>
+                            <h4 class="mb-2">Vaardigheden Ontwikkelen</h4>
+                            <p>Mijn doel is om mijn vaardigheden verder te ontwikkelen en innovatieve digitale oplossingen te creëren. Ik streef ernaar om mijn kennis in back-end technologieën zoals Python en SQL te verdiepen, terwijl ik mijn passie voor front-end design blijf combineren met performance en gebruiksvriendelijkheid.</p>
+                            <h4 class="mb-2">Nieuwe Technologieën</h4>
+                            <p>Ik ben vastbesloten om op de hoogte te blijven van de nieuwste technologieën en trends in de webontwikkeling, zodat ik altijd de meest moderne en efficiënte oplossingen kan bieden aan mijn klanten.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
-    
-    <section id="skills" class="d-flex align-items-center justify-content-center text-center" style="height: 40vh;">
+
+    <section class="d-flex align-items-center justify-content-center text-center mb-5" style="height: 40vh;" aria-labelledby="skills-heading">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
         <div class="container">
-            <h2 class="mb-4">Mijn Vaardigheden</h2>
+            <h2 id="skills-heading" class="mb-5">Mijn Vaardigheden</h2>
             <div class="row gy-3">
-                <div class="col-6 col-md-4">
+                <div class="col-6 col-md-4" data-aos="fade-up">
                     <div class="skill-box bg-dark p-3 rounded">
                         <i class="fab fa-html5 text-warning display-4"></i>
                         <p class="mt-2">HTML</p>
@@ -59,7 +115,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4">
+                <div class="col-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="skill-box bg-dark p-3 rounded">
                         <i class="fab fa-css3-alt text-primary display-4"></i>
                         <p class="mt-2">CSS</p>
@@ -68,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4">
+                <div class="col-6 col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="skill-box bg-dark p-3 rounded">
                         <i class="fab fa-js text-warning display-4"></i>
                         <p class="mt-2">JavaScript</p>
@@ -76,31 +132,31 @@
                             <div class="progress-bar bg-warning" style="width: 70%;"></div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-4">
+                </div>  
+                <div class="col-6 col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="skill-box bg-dark p-3 rounded">
                         <i class="fab fa-bootstrap text-purple display-4"></i>
                         <p class="mt-2">Bootstrap</p>
                         <div class="progress bg-secondary">
-                            <div class="progress-bar bg-purple" style="width: 60%;"></div>
+                            <div class="progress-bar bg-purple" style="width: 50%;"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4">
+                <div class="col-6 col-md-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="skill-box bg-dark p-3 rounded">
-                        <i class="fas fa-code text-success display-4"></i>
+                        <img src="images/python.png" alt="Python" class="img-fluid display-4">
                         <p class="mt-2">Python</p>
                         <div class="progress bg-secondary">
-                            <div class="progress-bar bg-success" style="width: 85%;"></div>
+                            <div class="progress-bar bg-success" style="width: 65%;"></div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-4">
+                </div>  
+                <div class="col-6 col-md-4" data-aos="fade-up" data-aos-delay="500">
                     <div class="skill-box bg-dark p-3 rounded">
                         <i class="fas fa-database text-info display-4"></i>
                         <p class="mt-2">SQL</p>
                         <div class="progress bg-secondary">
-                            <div class="progress-bar bg-info" style="width: 75%;"></div>
+                            <div class="progress-bar bg-info" style="width: 45%;"></div>
                         </div>
                     </div>
                 </div>
@@ -108,10 +164,10 @@
         </div>
     </section>
     
-    <section id="portfolio" class="py-5">
+    <section id="portfolio" class="py-5" aria-labelledby="portfolio-heading">
         <div class="container">
-            <h2 class="text-center mb-4">Mijn Werk</h2>
-
+            <h2 id="portfolio-heading" class="text-center mb-5">Projecten</h2>
+    
             <!-- Image Slider -->
             <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -121,28 +177,28 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="images/image.png" class="d-block w-100" alt="Project 1">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Project 1</h5>
-                            <p>Beschrijving van project 1</p>
+                        <img src="images/visuarkel.png" class="d-block img-fluid rounded" alt="Project 1">
+                        <div class="carousel-caption d-md-block">
+                            <h5>Visuarkel</h5>
+                            <p>Hier had ik een template gemaakt voor de vriend van mijn zus.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/image.png" class="d-block w-100" alt="Project 2">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Project 2</h5>
-                            <p>Beschrijving van project 2</p>
+                        <img src="images/Portfolio_website.png" class="d-block img-fluid rounded" alt="Project 2">
+                        <div class="carousel-caption d-md-block">
+                            <h5>Eerste portfolio website</h5>
+                            <p>Tijdens mijn eerste stage moesten we een begin maken van een portfolio website.</p>
                         </div>
-                    </div>
+                    </div> 
                     <div class="carousel-item">
-                        <img src="images/image.png" class="d-block w-100" alt="Project 3">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Project 3</h5>
-                            <p>Beschrijving van project 3</p>
+                        <img src="images/onfire.png" class="d-block img-fluid rounded" alt="Project 3">
+                        <div class="carousel-caption d-md-block">
+                            <h5>Jalapeño on fire</h5>
+                            <p>Een klein project dat mijn vader bedacht voor zijn bedrijf.</p>
                         </div>
                     </div>
                 </div>
-                
+    
                 <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Vorige</span>
@@ -150,38 +206,162 @@
                 <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Volgende</span>
-                </button>    
+                </button>
             </div>
         </div>
     </section>
     
-    <section id="contact" class="py-5">
+    <section id="contact" class="py-5" aria-labelledby="contact-heading">
         <div class="container">
-            <h2 class="text-center mb-4">Contact</h2>
-            <form id="contact-form" class="mx-auto" style="max-width: 500px;">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Naam:</label>
-                    <input type="text" class="form-control bg-dark text-white" id="name" name="name" required>
+            <div class="row justify-content-center">
+                <div class="col-sm-10 col-md-6 col-lg-5 p-5 rounded text-white box-shadow" 
+                     style="background: linear-gradient(to bottom, #01017a, #2752af8f);">
+                    <h2 id="contact-heading" class="text-center mb-4">Contact</h2>
+                    <form id="contact-form" novalidate>
+                        <div class="mb-3 position-relative">
+                            <label for="name" class="form-label">Naam:</label>
+                            <input type="text" class="form-control bg-white text-dark" id="name" name="name" required>
+                            <div class="error-message" id="name-error">Vul je naam in.</div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label for="email" class="form-label">E-mail:</label>
+                            <input type="email" class="form-control bg-white text-dark " id="email" name="email" required>
+                            <div class="error-message" id="email-error">Vul een geldig e-mailadres in.</div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label for="message" class="form-label">Bericht:</label>
+                            <textarea class="form-control bg-white text-dark" id="message" name="message" rows="6" required></textarea>
+                            <div class="error-message" id="message-error">Vul je bericht in.</div>
+                        </div>
+                        <button type="submit" class="btn btn-outline-light w-100">Verstuur</button>
+                    </form>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">E-mail:</label>
-                    <input type="email" class="form-control bg-dark text-white" id="email" name="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Bericht:</label>
-                    <textarea class="form-control bg-dark text-white" id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-outline-light w-100">Verstuur</button>
-            </form>
+            </div>
         </div>
-    </section>  
-
-    <footer class="bg-primaar text-center py-3 border-top border-black">
-        <p> &copy; 2025 Modern Portfolio - Gemaakt door Daan van Breugel</p>
+    </section>
+    
+    <footer class="bg-primaar text-center py-3 border-top border-black d-flex justify-content-between align-items-center"> 
+        <img src="./images/logo.png" alt="Logo" height="90" class="ms-3">
+        <div class="d-flex flex-column align-items-center">
+            <p class="mb-3 fs-5"> &copy; Daan van Breugel</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/daanvb06" target="_blank" class="text-white me-4 fs-4" style="text-decoration: none;">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.twitter.com/daanvb06" target="_blank" class="text-white me-4 fs-4" style="text-decoration: none;">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/daan_van_breugel" target="_blank" class="text-white fs-4" style="text-decoration: none;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <img src="./images/logo.png" alt="Logo" height="90" class="me-3">
     </footer>
     
-    <!-- Bootstrap JS Bundle -->
+    <!-- Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Bericht Verzonden</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bedankt, <span id="modalName"></span>! Je bericht is verzonden.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Sluiten</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="btn btn-primary">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("rFTXUW8pDcuh6WNXl");
+        })();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                let isValid = true;
+
+                if (!nameInput.value) {
+                    nameInput.classList.add('error');
+                    document.getElementById('name-error').style.display = 'block';
+                    isValid = false;
+                } else {
+                    nameInput.classList.remove('error');
+                    document.getElementById('name-error').style.display = 'none';
+                }
+
+                if (!emailInput.value || !emailInput.validity.valid) {
+                    emailInput.classList.add('error');
+                    document.getElementById('email-error').style.display = 'block';
+                    isValid = false;
+                } else {
+                    emailInput.classList.remove('error');
+                    document.getElementById('email-error').style.display = 'none';
+                }
+
+                if (!messageInput.value) {
+                    messageInput.classList.add('error');
+                    document.getElementById('message-error').style.display = 'block';
+                    isValid = false;
+                } else {
+                    messageInput.classList.remove('error');
+                    document.getElementById('message-error').style.display = 'none';
+                }
+            });
+        });
+
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.display = 'block';
+                setTimeout(() => {
+                    scrollToTopBtn.style.opacity = '1';
+                    scrollToTopBtn.style.right = '30px';
+                }, 10);
+            } else {
+                scrollToTopBtn.style.opacity = '0';
+                scrollToTopBtn.style.right = '-60px';
+                setTimeout(() => {
+                    scrollToTopBtn.style.display = 'none';
+                }, 500);
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animatieduur in ms
+            once: true, // Animatie slechts één keer afspelen
+        });
+    </script>
+
 </body>
 </html>
